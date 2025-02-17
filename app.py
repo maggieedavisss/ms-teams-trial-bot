@@ -29,5 +29,6 @@ def handle_message(message):
         return "I'm a simple bot hosted on Azure!"
 
 if __name__ == "__main__":
-    port = Config.PORT  # ✅ Use PORT from config.py
+    port = Config.PORT  # Use dynamic port from Config
+    print(f"Starting app on port {port}")  # Debugging log
     app.run(host="0.0.0.0", port=port)
