@@ -30,4 +30,5 @@ def handle_message(message):
 
 if __name__ == "__main__":
     port = Config.PORT  
+    print(f"Starting app on port {port}")
     app.run(host="0.0.0.0", port=port)
