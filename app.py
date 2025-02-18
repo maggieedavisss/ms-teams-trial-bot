@@ -3,7 +3,7 @@ import os
 from config import Config
 
 app = Flask(__name__)
-app.config.from_object(Config)  # ✅ Load configuration from config.py
+app.config.from_object(Config)  
 
 @app.route("/", methods=["GET"])
 def home():
@@ -27,3 +27,7 @@ def handle_message(message):
         return "Goodbye! Have a great day!"
     else:
         return "I'm a simple bot hosted on Azure!"
+
+if __name__ == "__main__":
+    port = Config.PORT  
+    app.run(host="0.0.0.0", port=port)
